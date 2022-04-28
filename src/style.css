@@ -80,6 +80,8 @@ body {
   gap: 15px;
   padding: 5px;
   background: #fff;
+  align-items: center;
+  align-content: center;
 }
 
 #todoList #submitBtn {
@@ -99,8 +101,13 @@ body {
   border: none;
 }
 
-.toDoItems:hover {
-  cursor: grab;
+.item .toDo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.item .toDo:hover {
+  cursor: move;
 }
 
 .toDoitem .item:hover {

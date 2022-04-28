@@ -33,7 +33,7 @@ const display = (todo) => {
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
     checkbox.classList.add('box');
-    checkbox.checked = task.completed ? true : false;
+    checkbox.checked = task.completed ? 'checked' : '';
     div.appendChild(checkbox);
     const inputDo = document.createElement('input');
     inputDo.setAttribute('type', 'text');

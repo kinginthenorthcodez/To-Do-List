@@ -44,28 +44,26 @@ export class ToDoList {
  };
 
  updateState = (item) => {
-  item.forEach((check, index) => {
-    check.addEventListener('change', () => {
-        if (check.checked) {
-          check.parentNode.children[1].style.textDecoration = 'line-through';
-          this.dotasks[index].completed = true;
-          this.setlocalStorage(this.dotasks);
-        } else {
-          check.parentNode.children[1].style.textDecoration = 'none';
-          this.dotasks[index].completed = false;
-          this.setlocalStorage(this.dotasks);
-        }
-    });
-  });
+   item.forEach((check, index) => {
+     check.addEventListener('change', () => {
+       if (check.checked) {
+         check.parentNode.children[1].style.textDecoration = 'line-through';
+         this.dotasks[index].completed = true;
+         this.setlocalStorage(this.dotasks);
+       } else {
+         check.parentNode.children[1].style.textDecoration = 'none';
+         this.dotasks[index].completed = false;
+         this.setlocalStorage(this.dotasks);
+       }
+     });
+   });
  };
 
  clearCompleted = () => {
    const submitBtn = document.querySelector('#submitBtn');
-   console.log(submitBtn);
    const data = this.dotasks.filter((item) => item.completed !== true);
    submitBtn.addEventListener('click', () => {
-     console.log("clicked");
-      this.setlocalStorage(data);
+     this.setlocalStorage(data);
    });
  };
 
@@ -138,9 +136,8 @@ export const display = (todo) => {
       });
     });
 
-  const checkBtn = document.querySelectorAll('.box');
-  doItem.updateState(checkBtn);
-
+    const checkBtn = document.querySelectorAll('.box');
+    doItem.updateState(checkBtn);
   });
 };
 

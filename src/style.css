@@ -110,13 +110,18 @@ body {
   cursor: move;
 }
 
+/* .toDo:focus {
+  background: #f1855d;
+} */
+
 .toDoitem .item:hover {
   cursor: move;
 }
 
 .fa-ellipsis-v:hover,
 .fa-turn-down-left:hover,
-.fa-refresh:hover {
+.fa-refresh:hover,
+.fa-trash:hover {
   cursor: pointer;
 }
 

@@ -43,6 +43,32 @@ export class ToDoList {
    });
  };
 
+ updateState = (item) => {
+  item.forEach((check, index) => {
+    check.addEventListener('change', () => {
+        if (check.checked) {
+          check.parentNode.children[1].style.textDecoration = 'line-through';
+          this.dotasks[index].completed = true;
+          this.setlocalStorage(this.dotasks);
+        } else {
+          check.parentNode.children[1].style.textDecoration = 'none';
+          this.dotasks[index].completed = false;
+          this.setlocalStorage(this.dotasks);
+        }
+    });
+  });
+ };
+
+ clearCompleted = () => {
+   const submitBtn = document.querySelector('#submitBtn');
+   console.log(submitBtn);
+   const data = this.dotasks.filter((item) => item.completed !== true);
+   submitBtn.addEventListener('click', () => {
+     console.log("clicked");
+      this.setlocalStorage(data);
+   });
+ };
+
  removeDo = (index) => {
    const beforeItem = this.dotasks.slice(0, index - 1);
    const afterItem = this.dotasks.slice(index, this.dotasks.length + 1);
@@ -111,7 +137,12 @@ export const display = (todo) => {
         });
       });
     });
+
+  const checkBtn = document.querySelectorAll('.box');
+  doItem.updateState(checkBtn);
+
   });
 };
 
+doItem.clearCompleted();
 export const tasks = doItem.getData();

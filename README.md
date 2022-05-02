@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo here:](https://kinginthenorthcodez.github.io/To-Do-List/docs/)
+[Live Demo here:](https://kinginthenorthcodez.github.io/To-Do-List/)
 
 ## Getting Started
 

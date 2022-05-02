@@ -7,13 +7,14 @@
 
 ## Built With
 
+- JavaScript | HTML | CSS
 - Webpack
 - ES6
 - Linters
 
 ## Live Demo
 
-(Not available))
+[Live Demo here:](https://kinginthenorthcodez.github.io/To-Do-List/)
 
 ## Getting Started
 

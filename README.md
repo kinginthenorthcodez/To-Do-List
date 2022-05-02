@@ -3,6 +3,7 @@
 
 > "To-do list" is a tool that helps to organize your day.
 
+![screenshot](./app_screenshot.png)
 
 ## Built With
 

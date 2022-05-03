@@ -49,12 +49,11 @@ export class ToDoList {
        if (check.checked) {
          check.parentNode.children[1].style.textDecoration = 'line-through';
          this.dotasks[index].completed = true;
-         this.setlocalStorage(this.dotasks);
        } else {
          check.parentNode.children[1].style.textDecoration = 'none';
          this.dotasks[index].completed = false;
-         this.setlocalStorage(this.dotasks);
        }
+       this.setlocalStorage(this.dotasks);
      });
    });
  };

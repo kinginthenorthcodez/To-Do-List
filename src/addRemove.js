@@ -59,13 +59,13 @@ export class ToDoList {
    });
  };
 
- //  clearCompleted = () => {
- //    const submitBtn = document.querySelector('#submitBtn');
- //    const data = this.dotasks.filter((item) => item.completed !== true);
- //    submitBtn.addEventListener('click', () => {
- //      this.setlocalStorage(data);
- //    });
- //  };
+  clearCompleted = () => {
+    const submitBtn = document.querySelector('#submitBtn');
+    const data = this.dotasks.filter((item) => item.completed !== true);
+    submitBtn.addEventListener('click', () => {
+      this.setlocalStorage(data);
+    });
+  };
 
  removeDo = (index) => {
    const beforeItem = this.dotasks.slice(0, index - 1);

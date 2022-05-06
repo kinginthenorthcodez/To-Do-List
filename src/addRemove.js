@@ -58,13 +58,13 @@ export class ToDoList {
    });
  };
 
- clearCompleted = () => {
-   const submitBtn = document.querySelector('#submitBtn');
-   const data = this.dotasks.filter((item) => item.completed !== true);
-   submitBtn.addEventListener('click', () => {
-     this.setlocalStorage(data);
-   });
- };
+ //  clearCompleted = () => {
+ //    const submitBtn = document.querySelector('#submitBtn');
+ //    const data = this.dotasks.filter((item) => item.completed !== true);
+ //    submitBtn.addEventListener('click', () => {
+ //      this.setlocalStorage(data);
+ //    });
+ //  };
 
  removeDo = (index) => {
    const beforeItem = this.dotasks.slice(0, index - 1);
@@ -113,6 +113,7 @@ export const display = (todo) => {
     li.appendChild(icon);
     toDoItems.appendChild(li);
     const dotsBtn = document.querySelectorAll('.dots');
+
     dotsBtn.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         const parent = e.target.parentNode;
